@@ -34,7 +34,7 @@ public class ProductCreatedEventHandler {
         LOGGER.info("Received event: {}", productCreatedEvent.getTitle());
 
         try {
-            String url = "http://localhost:8090/response/500";
+            String url = "http://localhost:8090/response/200";
             ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, null, String.class);
             if (response.getStatusCode().value() == HttpStatus.OK.value()) {
                 LOGGER.info("Received response: {}", response.getBody());
