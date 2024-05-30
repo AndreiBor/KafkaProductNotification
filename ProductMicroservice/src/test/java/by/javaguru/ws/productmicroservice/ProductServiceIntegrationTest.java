@@ -63,7 +63,7 @@ public class ProductServiceIntegrationTest {
         container.setupMessageListener((MessageListener<String, ProductCreatedEvent>) records::add);
         container.start();
         ContainerTestUtils.waitForAssignment(container, embeddedKafkaBroker.getPartitionsPerTopic());
-        System.out.println("embeddedKafkaBroker.getPartitionsPerTopic(): " + embeddedKafkaBroker.getPartitionsPerTopic());
+        //System.out.println("embeddedKafkaBroker.getPartitionsPerTopic(): " + embeddedKafkaBroker.getPartitionsPerTopic());
     }
 
     @Test
